@@ -128,4 +128,4 @@ Thus, $\operatorname{OPT}(6)=15$, and Item 2 is chosen.
 **Question:** Using the "Item Chosen" column from the table you completed in Part 5, trace back to find the exact quantities of each item to pack that maximize the value. What is the final optimal packing configuration for $W=6$ and the maximum value?
 
 *Your Answer:*
-Choosing Item 2 at capacity $6$ leaves capacity $4$. Choosing Item 2 again leaves capacity $2$, and choosing Item 2 a final time leaves capacity $0$. Therefore, the optimal packing is **three copies of Item 2**, with maximum value **$3(5)=15$**.
+picking  Item 2 at capacity $6$ leaves capacity $4$. Picking  Item 2 again leaves capacity $2$, and choosing Item 2 a final time leaves capacity $0$. Therefore, the optimal packing is **three copies of Item 2**, with maximum value **$3(5)=15$**.
