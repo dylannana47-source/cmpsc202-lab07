@@ -54,7 +54,8 @@ Consider the following simple example:
 
 **Question:** Draw the full recursion tree for `MaxValue(3)` using the example above. Label the remaining capacity at each node and indicate which item is chosen along each branch.
 
-*Your Answer (take a picture and upload it):*
+*Your Answer (take a picture and upload it):* <img width="3024" height="4032" alt="IMG_3047" src="https://github.com/user-attachments/assets/f368cc1c-76cd-41ec-877b-5085ab1bd865" />
+
 
 ```mermaid
 flowchart TD
