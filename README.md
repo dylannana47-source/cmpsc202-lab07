@@ -56,27 +56,31 @@ Consider the following simple example:
 
 *Your Answer (take a picture and upload it):*
 
-```text
-MaxValue(3)
-├── choose item 1 -> MaxValue(2)
-│   ├── choose item 1 -> MaxValue(1)
-│   │   ├── choose item 1 -> MaxValue(0)
-│   │   └── choose item 3 -> MaxValue(0)
-│   ├── choose item 2 -> MaxValue(0)
-│   └── choose item 3 -> MaxValue(1)
-│       ├── choose item 1 -> MaxValue(0)
-│       └── choose item 3 -> MaxValue(0)
-├── choose item 2 -> MaxValue(1)
-│   ├── choose item 1 -> MaxValue(0)
-│   └── choose item 3 -> MaxValue(0)
-└── choose item 3 -> MaxValue(2)
-    ├── choose item 1 -> MaxValue(1)
-    │   ├── choose item 1 -> MaxValue(0)
-    │   └── choose item 3 -> MaxValue(0)
-    ├── choose item 2 -> MaxValue(0)
-    └── choose item 3 -> MaxValue(1)
-        ├── choose item 1 -> MaxValue(0)
-        └── choose item 3 -> MaxValue(0)
+```mermaid
+flowchart TD
+    R["MaxValue(3)"]
+
+    R -->|"Item 1"| A["MaxValue(2)"]
+    R -->|"Item 2"| B["MaxValue(1)"]
+    R -->|"Item 3"| C["MaxValue(2)"]
+
+    A -->|"Item 1"| A1["MaxValue(1)"]
+    A -->|"Item 2"| A0["MaxValue(0)"]
+    A -->|"Item 3"| A3["MaxValue(1)"]
+    B -->|"Item 1"| B1["MaxValue(0)"]
+    B -->|"Item 3"| B3["MaxValue(0)"]
+    C -->|"Item 1"| C1["MaxValue(1)"]
+    C -->|"Item 2"| C0["MaxValue(0)"]
+    C -->|"Item 3"| C3["MaxValue(1)"]
+
+    A1 -->|"Item 1"| A11["MaxValue(0)"]
+    A1 -->|"Item 3"| A13["MaxValue(0)"]
+    A3 -->|"Item 1"| A31["MaxValue(0)"]
+    A3 -->|"Item 3"| A33["MaxValue(0)"]
+    C1 -->|"Item 1"| C11["MaxValue(0)"]
+    C1 -->|"Item 3"| C13["MaxValue(0)"]
+    C3 -->|"Item 1"| C31["MaxValue(0)"]
+    C3 -->|"Item 3"| C33["MaxValue(0)"]
 ```
 
 Each branch label is the item chosen, and the capacity after that choice is shown in the recursive call.
